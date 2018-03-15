@@ -1,0 +1,17 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+nifi-convertjsontoddl-nar
+
+
+From: 'Apache NiFi Project' (http://nifi.apache.org/)
+  - nifi-convertjsontoddl-processors (http://nifi.apache.org/nifi-nar-bundles/nifi-convertjsontoddl/nifi-convertjsontoddl-processors) com.dataflowdeveloper:nifi-convertjsontoddl-processors:jar:1.0
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+  - nifi-utils (http://nifi.apache.org/nifi-commons/nifi-utils) org.apache.nifi:nifi-utils:jar:1.5.0
+    License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+
+
+
