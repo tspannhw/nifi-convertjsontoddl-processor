@@ -85,11 +85,11 @@ public class JsonToDDLProcessor extends AbstractProcessor {
 	 */
 	public static final PropertyDescriptor TABLE_TYPE = new PropertyDescriptor.Builder().name(FIELD_TABLE_TYPE)
 			.displayName("tableType").description("Which table is it?  MySQL, Hive, Oracle, Postgresql, Phoenix?")
-			.addValidator(StandardValidators.NON_BLANK_VALIDATOR).expressionLanguageSupported(false).build();
+			.addValidator(StandardValidators.NON_BLANK_VALIDATOR).expressionLanguageSupported(true).build();
 
 	public static final PropertyDescriptor TABLE_NAME = new PropertyDescriptor.Builder().name(FIELD_TABLE_NAME)
 			.displayName("tableName").description("The Name of the table, defaults to filename")
-			.addValidator(StandardValidators.NON_BLANK_VALIDATOR).expressionLanguageSupported(false).build();
+			.addValidator(StandardValidators.NON_BLANK_VALIDATOR).expressionLanguageSupported(true).build();
 
 	public static final Relationship REL_SUCCESS = new Relationship.Builder().name(FIELD_SUCCESS)
 			.description("Successfully extract content.").build();

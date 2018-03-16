@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.nifi.util.MockFlowFile;
+import org.apache.nifi.util.MockPropertyValue;
 import org.apache.nifi.util.TestRunner;
 import org.apache.nifi.util.TestRunners;
 import org.junit.Before;
@@ -45,6 +46,7 @@ public class JsonToDDLProcessorTest {
 				}
 			};
 			flowFile.putAttributes(attrs);
+			testRunner.setValidateExpressionUsage(false);
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "simple");
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "hive");
 		} catch (FileNotFoundException e) {
@@ -84,6 +86,7 @@ public class JsonToDDLProcessorTest {
 				}
 			};
 			flowFile.putAttributes(attrs);
+			testRunner.setValidateExpressionUsage(false);
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "complex");
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "oracle");
 		} catch (FileNotFoundException e) {
@@ -123,7 +126,8 @@ public class JsonToDDLProcessorTest {
 				}
 			};
 			flowFile.putAttributes(attrs);			
-			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "inception");
+			testRunner.setValidateExpressionUsage(false);
+			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "${filename:substring( 0, ${filename:length():minus(3)} )}");
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "mysql");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -162,6 +166,7 @@ public class JsonToDDLProcessorTest {
 				}
 			};
 			flowFile.putAttributes(attrs);
+			testRunner.setValidateExpressionUsage(false);
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "weather");
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "postgresql");
 		} catch (FileNotFoundException e) {
