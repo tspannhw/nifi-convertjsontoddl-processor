@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description></description>
+    <groupId>e2476aa4-0160-1000-cb1a-9248d0c588b3</groupId>
+    <name>JsonToTable</name>
+    <snippet>
+        <processGroups>
+            <id>87c8c0f0-5b4e-374c-0000-000000000000</id>
+            <parentGroupId>e6a85edf-2da2-3833-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <versionedComponentId>87c8c0f0-5b4e-374c-8fc6-7ea89aa1df5c</versionedComponentId>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>ca37ae5b-c882-39f4-0000-000000000000</id>
+                    <parentGroupId>87c8c0f0-5b4e-374c-0000-000000000000</parentGroupId>
+                    <versionedComponentId>ca37ae5b-c882-39f4-900d-098ce2205267</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>87c8c0f0-5b4e-374c-0000-000000000000</groupId>
+                        <id>5cef0e21-5c5f-3118-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>5cef0e21-5c5f-3118-8fea-39f22e7786ab</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>87c8c0f0-5b4e-374c-0000-000000000000</groupId>
+                        <id>717b3400-8ba9-320e-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>717b3400-8ba9-320e-b270-021d2415b81b</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>274c4161-75fe-30af-0000-000000000000</id>
+                    <parentGroupId>87c8c0f0-5b4e-374c-0000-000000000000</parentGroupId>
+                    <versionedComponentId>274c4161-75fe-30af-a4cc-c26359b641d7</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>87c8c0f0-5b4e-374c-0000-000000000000</groupId>
+                        <id>1b263374-7024-38c4-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>1b263374-7024-38c4-8a40-c9ee3a886aa6</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>87c8c0f0-5b4e-374c-0000-000000000000</groupId>
+                        <id>5cef0e21-5c5f-3118-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>5cef0e21-5c5f-3118-8fea-39f22e7786ab</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>279bf11f-887e-3c52-0000-000000000000</id>
+                    <parentGroupId>87c8c0f0-5b4e-374c-0000-000000000000</parentGroupId>
+                    <versionedComponentId>279bf11f-887e-3c52-88f4-93c7a056f8db</versionedComponentId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>87c8c0f0-5b4e-374c-0000-000000000000</groupId>
+                        <id>dba056b4-a4c3-3cef-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>dba056b4-a4c3-3cef-b191-a476b1050efb</versionedComponentId>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>failure</selectedRelationships>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>87c8c0f0-5b4e-374c-0000-000000000000</groupId>
+                        <id>1b263374-7024-38c4-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                        <versionedComponentId>1b263374-7024-38c4-8a40-c9ee3a886aa6</versionedComponentId>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <processors>
+                    <id>dba056b4-a4c3-3cef-0000-000000000000</id>
+                    <parentGroupId>87c8c0f0-5b4e-374c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>616.0000513681407</x>
+                        <y>1009.0000293596049</y>
+                    </position>
+                    <versionedComponentId>dba056b4-a4c3-3cef-b191-a476b1050efb</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Directory</key>
+<value>
+    <name>Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>
+    <name>Conflict Resolution Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>
+    <name>Create Missing Directories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+<value>
+    <name>Maximum File Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+<value>
+    <name>Last Modified Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+<value>
+    <name>Permissions</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+<value>
+    <name>Owner</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Group</key>
+<value>
+    <name>Group</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Directory</key>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>fail</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+                            </entry>
+                            <entry>
+<key>Group</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.PutFile</type>
+                </processors>
+                <processors>
+                    <id>1b263374-7024-38c4-0000-000000000000</id>
+                    <parentGroupId>87c8c0f0-5b4e-374c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>613.0000513681407</x>
+                        <y>777.0000293596049</y>
+                    </position>
+                    <versionedComponentId>1b263374-7024-38c4-8a40-c9ee3a886aa6</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-convertjsontoddl-nar</artifact>
+                        <group>com.dataflowdeveloper</group>
+                        <version>1.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>TABLE_TYPE</key>
+<value>
+    <name>TABLE_TYPE</name>
+</value>
+                            </entry>
+                            <entry>
+<key>TABLE_NAME</key>
+<value>
+    <name>TABLE_NAME</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>TABLE_TYPE</key>
+<value>hive</value>
+                            </entry>
+                            <entry>
+<key>TABLE_NAME</key>
+<value>${filename:substring( 0, ${filename:length():minus(5)} )}</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>JsonToDDLProcessor</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>com.dataflowdeveloper.processors.convertjsontoddl.JsonToDDLProcessor</type>
+                </processors>
+                <processors>
+                    <id>5cef0e21-5c5f-3118-0000-000000000000</id>
+                    <parentGroupId>87c8c0f0-5b4e-374c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>605.0000513681407</x>
+                        <y>547.0000293596049</y>
+                    </position>
+                    <versionedComponentId>5cef0e21-5c5f-3118-8fea-39f22e7786ab</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>File to Fetch</key>
+<value>
+    <name>File to Fetch</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Completion Strategy</key>
+<value>
+    <name>Completion Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Move Destination Directory</key>
+<value>
+    <name>Move Destination Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Move Conflict Strategy</key>
+<value>
+    <name>Move Conflict Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Log level when file not found</key>
+<value>
+    <name>Log level when file not found</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Log level when permission denied</key>
+<value>
+    <name>Log level when permission denied</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>File to Fetch</key>
+<value>${absolute.path}/${filename}</value>
+                            </entry>
+                            <entry>
+<key>Completion Strategy</key>
+<value>None</value>
+                            </entry>
+                            <entry>
+<key>Move Destination Directory</key>
+                            </entry>
+                            <entry>
+<key>Move Conflict Strategy</key>
+<value>Rename</value>
+                            </entry>
+                            <entry>
+<key>Log level when file not found</key>
+<value>ERROR</value>
+                            </entry>
+                            <entry>
+<key>Log level when permission denied</key>
+<value>ERROR</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>FetchFile</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>not.found</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>permission.denied</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.FetchFile</type>
+                </processors>
+                <processors>
+                    <id>717b3400-8ba9-320e-0000-000000000000</id>
+                    <parentGroupId>87c8c0f0-5b4e-374c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>609.0000513681407</x>
+                        <y>318.0000293596049</y>
+                    </position>
+                    <versionedComponentId>717b3400-8ba9-320e-b270-021d2415b81b</versionedComponentId>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Input Directory</key>
+<value>
+    <name>Input Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Recurse Subdirectories</key>
+<value>
+    <name>Recurse Subdirectories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Input Directory Location</key>
+<value>
+    <name>Input Directory Location</name>
+</value>
+                            </entry>
+                            <entry>
+<key>File Filter</key>
+<value>
+    <name>File Filter</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Path Filter</key>
+<value>
+    <name>Path Filter</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Minimum File Age</key>
+<value>
+    <name>Minimum File Age</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Age</key>
+<value>
+    <name>Maximum File Age</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Minimum File Size</key>
+<value>
+    <name>Minimum File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Size</key>
+<value>
+    <name>Maximum File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Ignore Hidden Files</key>
+<value>
+    <name>Ignore Hidden Files</name>
+</value>
+                            </entry>
+                            <entry>
+<key>target-system-timestamp-precision</key>
+<value>
+    <name>target-system-timestamp-precision</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Input Directory</key>
+<value>/Volumes/seagate/projects/nifi-convertjsontoddl-processor/nifi-convertjsontoddl-processors/src/test/resources</value>
+                            </entry>
+                            <entry>
+<key>Recurse Subdirectories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Input Directory Location</key>
+<value>Local</value>
+                            </entry>
+                            <entry>
+<key>File Filter</key>
+<value>[^\.].*</value>
+                            </entry>
+                            <entry>
+<key>Path Filter</key>
+                            </entry>
+                            <entry>
+<key>Minimum File Age</key>
+<value>10 sec</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Age</key>
+                            </entry>
+                            <entry>
+<key>Minimum File Size</key>
+<value>20 B</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Size</key>
+                            </entry>
+                            <entry>
+<key>Ignore Hidden Files</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>target-system-timestamp-precision</key>
+<value>auto-detect</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>Grab Json Files</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>RUNNING</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ListFile</type>
+                </processors>
+            </contents>
+            <name>JSON to Table Create</name>
+            <variables/>
+            <versionControlInformation>
+                <bucketId>77af1571-e1a4-435f-af74-7b814f33c565</bucketId>
+                <bucketName>conference</bucketName>
+                <flowDescription></flowDescription>
+                <flowId>d53cd041-ddee-4788-9c23-08b2a050ebb1</flowId>
+                <flowName>JSON to Table Create</flowName>
+                <registryId>76175000-0161-1000-b28f-a087864d67d9</registryId>
+                <registryName>Princeton Production NiFi Registry</registryName>
+                <state>UP_TO_DATE</state>
+                <stateExplanation>Flow version is current</stateExplanation>
+                <version>2</version>
+            </versionControlInformation>
+        </processGroups>
+    </snippet>
+    <timestamp>03/16/2018 12:28:48 EDT</timestamp>
+</template>
