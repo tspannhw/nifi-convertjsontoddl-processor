@@ -282,7 +282,7 @@ public class JsonToDDLProcessor extends AbstractProcessor {
 
 	@Override
 	public final List<PropertyDescriptor> getSupportedPropertyDescriptors() {
-		return descriptors;
+		return this.descriptors;
 	}
 
 	@OnScheduled
@@ -300,10 +300,11 @@ public class JsonToDDLProcessor extends AbstractProcessor {
 			flowFile = session.create();
 		}
 
-		final String tableType = context.getProperty(FIELD_TABLE_TYPE).getValue();
+		final String tableType = context.getProperty(FIELD_TABLE_TYPE).evaluateAttributeExpressions(flowFile).getValue();
 		final String filename = flowFile.getAttribute(FILENAME);
-		final String tableName = context.getProperty(FIELD_TABLE_NAME).getValue();
+		final String tableName = context.getProperty(FIELD_TABLE_NAME).evaluateAttributeExpressions(flowFile).getValue();
 		String selectedTableName = ((tableName != null) ? tableName.trim() : filename);
+		
 		final HashMap<String, String> attributes = new HashMap<String, String>();
 
 		try {

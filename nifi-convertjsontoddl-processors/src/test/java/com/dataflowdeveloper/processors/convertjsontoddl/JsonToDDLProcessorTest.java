@@ -126,9 +126,9 @@ public class JsonToDDLProcessorTest {
 				}
 			};
 			flowFile.putAttributes(attrs);			
-			testRunner.setValidateExpressionUsage(false);
-			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "${filename:substring( 0, ${filename:length():minus(3)} )}");
-			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "mysql");
+			testRunner.setValidateExpressionUsage(true);
+			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "mysql.json");
+			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "${filename:substring( 0, ${filename:length():minus(5)} )}");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -141,9 +141,9 @@ public class JsonToDDLProcessorTest {
 		for (MockFlowFile mockFile : successFiles) {
 			try {
 				testRunner.assertAllFlowFilesTransferred(JsonToDDLProcessor.REL_SUCCESS);
-//				for (String attribute : mockFile.getAttributes().keySet()) {
-//					System.out.println("Attribute:" + attribute + "=" + mockFile.getAttribute(attribute));
-//				}
+				for (String attribute : mockFile.getAttributes().keySet()) {
+					System.out.println("Attribute:" + attribute + "=" + mockFile.getAttribute(attribute));
+				}
 
 				mockFile.assertAttributeExists(JsonToDDLProcessor.FIELD_DDL);
 				assertTrue(  mockFile.getAttribute(JsonToDDLProcessor.FIELD_DDL).contains("CREATE TABLE") );
@@ -166,7 +166,7 @@ public class JsonToDDLProcessorTest {
 				}
 			};
 			flowFile.putAttributes(attrs);
-			testRunner.setValidateExpressionUsage(false);
+			testRunner.setValidateExpressionUsage(true);
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "weather");
 			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "postgresql");
 		} catch (FileNotFoundException e) {
