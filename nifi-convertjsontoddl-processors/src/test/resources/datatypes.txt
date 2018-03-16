@@ -1,0 +1,31 @@
+Apache Hive Types
+
+
+TINYINT
+
+SMALLINT
+
+INT
+
+BIGINT
+
+BOOLEAN
+
+DOUBLE
+
+FLOAT
+
+STRING
+
+TIMESTAMP
+
+DECIMAL [ (precision, scale) ]
+
+DATE 
+
+CHAR. Fixed length character data, with a specified length between 1 and 255
+
+VARCHAR. Variable length character data, with a specified length between 1 and 65535
+
+
+

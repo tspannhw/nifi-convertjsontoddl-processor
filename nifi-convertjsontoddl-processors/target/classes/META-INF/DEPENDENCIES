@@ -6,9 +6,25 @@
 nifi-convertjsontoddl-processors
 
 
+From: 'an unknown organization'
+  - Gson (https://github.com/google/gson/gson) com.google.code.gson:gson:jar:2.8.0
+    License: Apache 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
 From: 'Apache NiFi Project' (http://nifi.apache.org/)
   - nifi-utils (http://nifi.apache.org/nifi-commons/nifi-utils) org.apache.nifi:nifi-utils:jar:1.5.0
     License: Apache License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0)
+
+From: 'FasterXML' (http://fasterxml.com/)
+  - Jackson-annotations (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-annotations:bundle:2.9.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Jackson-core (https://github.com/FasterXML/jackson-core) com.fasterxml.jackson.core:jackson-core:bundle:2.9.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - jackson-databind (http://github.com/FasterXML/jackson) com.fasterxml.jackson.core:jackson-databind:bundle:2.9.3
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (https://www.apache.org/)
+  - Apache Commons IO (http://commons.apache.org/proper/commons-io/) commons-io:commons-io:jar:2.6
+    License: Apache License, Version 2.0  (https://www.apache.org/licenses/LICENSE-2.0.txt)
 
 
 
