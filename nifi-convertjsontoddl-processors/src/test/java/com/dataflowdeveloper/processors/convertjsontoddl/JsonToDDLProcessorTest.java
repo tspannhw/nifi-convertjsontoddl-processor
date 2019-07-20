@@ -141,9 +141,9 @@ public class JsonToDDLProcessorTest {
 		for (MockFlowFile mockFile : successFiles) {
 			try {
 				testRunner.assertAllFlowFilesTransferred(JsonToDDLProcessor.REL_SUCCESS);
-				for (String attribute : mockFile.getAttributes().keySet()) {
-					System.out.println("Attribute:" + attribute + "=" + mockFile.getAttribute(attribute));
-				}
+//				for (String attribute : mockFile.getAttributes().keySet()) {
+//					System.out.println("Attribute:" + attribute + "=" + mockFile.getAttribute(attribute));
+//				}
 
 				mockFile.assertAttributeExists(JsonToDDLProcessor.FIELD_DDL);
 				assertTrue(  mockFile.getAttribute(JsonToDDLProcessor.FIELD_DDL).contains("CREATE TABLE") );
@@ -152,8 +152,7 @@ public class JsonToDDLProcessorTest {
 			}
 		}
 	}
-	
-	
+
 	@Test
 	public void processor_should_work_for_weather_fields() {
 
@@ -192,5 +191,47 @@ public class JsonToDDLProcessorTest {
 			}
 		}
 	}
-	
+
+	@Test
+	public void processor_should_produce_DDL_with_primary_key(){
+
+		try {
+			final String filename = "simple.json";
+			MockFlowFile flowFile = testRunner.enqueue(new FileInputStream(new File("src/test/resources/" + filename)));
+			Map<String, String> attrs = new HashMap<String, String>() {
+				{
+					put("filename", filename);
+				}
+			};
+			flowFile.putAttributes(attrs);
+			testRunner.setValidateExpressionUsage(false);
+			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_NAME, "simple");
+			testRunner.setProperty(JsonToDDLProcessor.FIELD_TABLE_TYPE, "hive");
+			testRunner.setProperty(JsonToDDLProcessor.FIELD_PRIMARY_KEY, "EMPID");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+
+		testRunner.assertValid();
+		testRunner.run();
+		testRunner.assertTransferCount(JsonToDDLProcessor.REL_FAILURE, 0);
+
+		List<MockFlowFile> successFiles = testRunner.getFlowFilesForRelationship(JsonToDDLProcessor.REL_SUCCESS);
+		for (MockFlowFile mockFile : successFiles) {
+			try {
+
+				testRunner.assertAllFlowFilesTransferred(JsonToDDLProcessor.REL_SUCCESS);
+//				for (String attribute : mockFile.getAttributes().keySet()) {
+//					System.out.println("Attribute:" + attribute + "=" + mockFile.getAttribute(attribute));
+//				}
+
+				mockFile.assertAttributeExists(JsonToDDLProcessor.FIELD_DDL);
+				assertTrue(  mockFile.getAttribute(JsonToDDLProcessor.FIELD_DDL).contains("CREATE TABLE") );
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+
 }
